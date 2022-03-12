@@ -2190,3 +2190,4 @@ Received Import Request.
 Start importing Assets/關卡1.unity using Guid(12a1344ece4643d4a8c3fc4d0bb7ed12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4aed0a4d10f9b5f95f087aa390626a8') in 0.014361 seconds 
   Import took 0.018389 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
