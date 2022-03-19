@@ -19,6 +19,16 @@ public class GameManager : MonoBehaviour
     public string tagProp = "道具";
     [Header("陷阱標籤")]
     public string tagTrap = "陷阱";
+    [Header("吃到會補血的道具名稱")]
+    public string propEatToAddHp = "補血";
+    [Header("吃到補血恢復血量"), Range(0, 50)]
+    public float valueEatToAddHp = 10;
+    [Header("結束畫面")]
+    public CanvasGroup groupFinal;
+    [Header("結束畫面標題")]
+    public Text textFinalTitle;
+    [Header("顯示結束畫面間隔"), Range(0, 0.5f)]
+    public float showfinalInterval = 0.1f;
 
     private int score;
     private float hpMax;
@@ -32,6 +42,15 @@ public class GameManager : MonoBehaviour
     {
         UpdateTimeUI();
         UpdateHpUI();
+    }
+
+    /// <summary>
+    /// 顯示結束畫面
+    /// 每次增加 0.2
+    /// </summary>
+    private void showFinal()
+    {
+        groupFinal.alpha += 0.2f;
     }
 
     /// <summary>
